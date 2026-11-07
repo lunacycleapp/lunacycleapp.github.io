@@ -1,245 +1,299 @@
-<meta charset="UTF-8">
-<title>Luna — Privacy Policy</title>
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacidad · Luna</title>
 <style>
   :root {
-    --bg: #fdf8ff;
-    --surface: #ffffff;
-    --border: #e8daf5;
-    --text: #1a0d2e;
-    --muted: #6b5680;
-    --accent: #8b3fa8;
-    --rose: #c94070;
-    --tag-bg: #f3eaff;
-    --btn-bg: #f3eaff;
-    --btn-active: #8b3fa8;
-    --btn-active-text: #ffffff;
+    --bg:#ffffff; --card:#f7f4fc; --ink:#241536; --muted:#5d4d78;
+    --line:#e2d8f2; --accent:#7b3fc4; --warn:#fff4e6; --warnline:#e8b773;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #0d0520; --surface: #160a2e; --border: #2e1a4a;
-      --text: #f0e8ff; --muted: #a888cc; --accent: #c07af0;
-      --rose: #e8507a; --tag-bg: #1e0e38; --btn-bg: #1e0e38;
-      --btn-active: #b967ff; --btn-active-text: #ffffff;
+      --bg:#140c22; --card:#1e1333; --ink:#efe6ff; --muted:#b4a0d4;
+      --line:#352352; --accent:#c08cff; --warn:#2e2110; --warnline:#8a6a2f;
     }
   }
-  :root[data-theme="dark"] {
-    --bg: #0d0520; --surface: #160a2e; --border: #2e1a4a;
-    --text: #f0e8ff; --muted: #a888cc; --accent: #c07af0;
-    --rose: #e8507a; --tag-bg: #1e0e38; --btn-bg: #1e0e38;
-    --btn-active: #b967ff; --btn-active-text: #ffffff;
+  * { box-sizing:border-box }
+  body {
+    margin:0; padding:0 16px 72px; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
   }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; font-size: 16px; line-height: 1.7; padding-bottom: 80px; }
-
-  header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 28px 24px 20px; text-align: center; }
-  .logo-mark { font-family: Georgia, serif; font-style: italic; font-size: 34px; color: var(--accent); display: block; margin-bottom: 2px; }
-  .header-sub { font-size: 13px; color: var(--muted); letter-spacing: 0.04em; }
-
-  .lang-bar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 12px 24px; display: flex; justify-content: center; gap: 6px; flex-wrap: wrap; }
-  .lang-btn { background: var(--btn-bg); color: var(--muted); border: 1px solid var(--border); border-radius: 20px; padding: 4px 14px; font-size: 13px; font-weight: 500; cursor: pointer; transition: background 0.15s, color 0.15s, border-color 0.15s; }
-  .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
-  .lang-btn.active { background: var(--btn-active); color: var(--btn-active-text); border-color: var(--btn-active); }
-
-  .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
-  .updated { display: block; text-align: center; font-size: 13px; color: var(--muted); padding: 24px 0 8px; }
-  h2 { font-size: 18px; font-weight: 600; color: var(--text); margin: 44px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
-  p { margin-bottom: 14px; color: var(--text); }
-  ul { margin: 0 0 14px; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
-  li { color: var(--text); }
-  .tag { display: inline-block; background: var(--tag-bg); color: var(--accent); font-size: 12px; font-weight: 500; padding: 2px 10px; border-radius: 20px; letter-spacing: 0.03em; margin-right: 4px; margin-bottom: 6px; }
-  .highlight { background: var(--tag-bg); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 20px 0; font-size: 15px; color: var(--text); }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .contact-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-top: 20px; text-align: center; }
-  .contact-box a { font-size: 17px; font-weight: 500; color: var(--rose); }
+  main { max-width:44rem; margin:0 auto }
+  header { padding:48px 0 8px; border-bottom:1px solid var(--line); margin-bottom:32px }
+  h1 { font-size:1.9rem; line-height:1.2; margin:0 0 8px; text-wrap:balance }
+  h2 {
+    font-size:1.15rem; margin:40px 0 10px; padding-top:20px;
+    border-top:1px solid var(--line); text-wrap:balance;
+  }
+  h2:first-of-type { border-top:0; padding-top:0 }
+  h3 { font-size:1rem; margin:22px 0 6px; color:var(--accent) }
+  p, li { color:var(--ink) }
+  .sub { color:var(--muted); font-size:.95rem; margin:0 }
+  code {
+    background:var(--card); padding:1px 5px; border-radius:4px;
+    font:0.88em ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  table { width:100%; border-collapse:collapse; margin:14px 0; font-size:.93rem }
+  th, td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top }
+  th { color:var(--muted); font-weight:600 }
+  .wrap { overflow-x:auto }
+  .box {
+    background:var(--card); border:1px solid var(--line);
+    border-radius:12px; padding:14px 18px; margin:18px 0;
+  }
+  .box.warn { background:var(--warn); border-color:var(--warnline) }
+  .box p:first-child { margin-top:0 }
+  .box p:last-child { margin-bottom:0 }
+  a { color:var(--accent) }
+  footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem }
+  .lang { font-size:.9rem; color:var(--muted) }
 </style>
+</head>
+<body>
+<main>
 
 <header>
-  <span class="logo-mark">Luna</span>
-  <span class="header-sub" id="header-sub">Política de Privacidad</span>
+  <h1>Política de privacidad de Luna</h1>
+  <p class="sub">Última actualización: 6 de noviembre de 2026 · <a href="#english">English version below</a></p>
 </header>
 
-<div class="lang-bar">
-  <button class="lang-btn active" onclick="setLang('es')">Español</button>
-  <button class="lang-btn" onclick="setLang('en')">English</button>
-  <button class="lang-btn" onclick="setLang('de')">Deutsch</button>
-  <button class="lang-btn" onclick="setLang('fr')">Français</button>
-  <button class="lang-btn" onclick="setLang('it')">Italiano</button>
-  <button class="lang-btn" onclick="setLang('pt')">Português</button>
+<div class="box">
+  <p><strong>Lo esencial.</strong> Tus datos de ciclo viven cifrados en tu teléfono.
+  No hay analítica, ni seguimiento de uso, ni informes de fallos enviados a nadie.
+  Sólo salen de tu móvil en tres casos, y los tres los decides tú: la copia en tu
+  Google Drive, el modo pareja y el chat con la asistente.</p>
 </div>
 
-<div class="container">
-  <span class="updated" id="updated-date"></span>
-  <div id="policy-content"></div>
+<h2>1. Quién trata tus datos</h2>
+<p>Luna es una aplicación desarrollada de forma independiente. Para cualquier asunto
+relacionado con tus datos, incluido el ejercicio de tus derechos, escribe a:</p>
+<p><strong><a href="mailto:lunacycleappcontact@gmail.com">lunacycleappcontact@gmail.com</a></strong></p>
+
+<h2>2. Qué datos recoge la app y dónde se guardan</h2>
+
+<h3>2.1 En tu teléfono, y sólo ahí</h3>
+<p>La mayor parte de lo que registras no sale nunca del dispositivo:</p>
+<div class="wrap">
+<table>
+  <tr><th>Dato</th><th>Protección</th></tr>
+  <tr><td>Ciclos, reglas y predicciones</td><td rowspan="6">Base de datos cifrada con SQLCipher</td></tr>
+  <tr><td>Síntomas, estado de ánimo y notas del diario</td></tr>
+  <tr><td>Temperatura basal y flujo cervical</td></tr>
+  <tr><td>Medicación y recordatorios</td></tr>
+  <tr><td>Actividad sexual</td></tr>
+  <tr><td>Datos de embarazo y conversaciones del chat</td></tr>
+  <tr><td>Nombre, fecha de nacimiento, correo de Google, PIN</td><td>Cifrados con la cámara de claves de Android (AES/GCM)</td></tr>
+  <tr><td>Fotos de barriga</td><td>Carpeta privada de la app</td></tr>
+  <tr><td>Informes de fallo</td><td><strong>No se envían a nadie.</strong> Se guardan en el móvil para que puedas consultarlos</td></tr>
+</table>
 </div>
 
-<script>
-const T = {
-  es: {
-    headerSub: "Política de Privacidad",
-    updated: "Última actualización: agosto de 2026",
-    highlight: "Luna es una app de seguimiento del ciclo menstrual diseñada para ser privada por defecto. Tus datos de salud son tuyos — no los vendemos, no los compartimos con anunciantes, y no construimos perfiles comerciales con ellos.",
-    sections: [
-      { title: "1. Qué información recopilamos",
-        body: `<p>Luna recopila únicamente la información que tú introduces directamente en la app:</p><ul><li><strong>Datos del ciclo menstrual:</strong> fechas de inicio de período, duración del ciclo</li><li><strong>Síntomas y bienestar:</strong> humor, síntomas físicos, notas del día, temperatura basal, flujo cervical</li><li><strong>Actividad sexual:</strong> registros opcionales que introduces tú</li><li><strong>Medicamentos y recordatorios:</strong> nombres y horarios que configures</li><li><strong>Perfil:</strong> nombre, avatar y foto de perfil (opcional)</li><li><strong>Cuenta de Google:</strong> nombre, correo electrónico y foto de perfil, si eliges iniciar sesión</li></ul>` },
-      { title: "2. Cómo almacenamos tus datos",
-        body: `<p><strong>Almacenamiento local:</strong> todos tus datos se guardan localmente en tu dispositivo mediante una base de datos privada de la app. No tenemos acceso a estos datos.</p><p><strong>Copia de seguridad en Google Drive:</strong> si inicias sesión con Google y activas la sincronización, Luna guarda una copia en la carpeta privada de la app en tu Google Drive (<code>appDataFolder</code>). Solo accesible para Luna a través de tu propia cuenta.</p>` },
-      { title: "3. Servicios de terceros",
-        body: `<span class="tag">Firebase</span><span class="tag">Google Sign-In</span><span class="tag">Google Drive API</span><span class="tag">Gemini AI</span><ul><li><strong>Firebase Authentication:</strong> gestiona el inicio de sesión con Google. <a href="https://firebase.google.com/support/privacy" target="_blank">Política de Firebase</a></li><li><strong>Firebase App Check:</strong> verifica que las solicitudes provienen de Luna, sin recopilar datos de usuario</li><li><strong>Google Drive API:</strong> almacena tu copia de seguridad en tu propia cuenta de Drive. <a href="https://policies.google.com/privacy" target="_blank">Política de Google</a></li><li><strong>Gemini AI:</strong> si usas el asistente de IA, tus consultas se envían a Gemini. No incluimos tus datos de salud sin tu consentimiento explícito</li></ul>` },
-      { title: "4. Qué NO hacemos",
-        body: `<ul><li>No vendemos tus datos a terceros</li><li>No compartimos tus datos de salud con anunciantes</li><li>No utilizamos tus datos para publicidad dirigida</li><li>No recopilamos analíticas de comportamiento</li><li>No accedemos a tus datos locales sin tu intervención</li></ul>` },
-      { title: "5. Permisos que solicita la app",
-        body: `<ul><li><strong>Notificaciones:</strong> para recordatorios de ciclo que tú configures</li><li><strong>Alarmas exactas:</strong> para que los recordatorios lleguen a la hora precisa</li><li><strong>Internet:</strong> para sincronización con Google Drive y el asistente de IA</li><li><strong>Biometría:</strong> para el bloqueo con huella dactilar, si lo activas</li></ul><p>Luna no solicita acceso a cámara, micrófono, contactos, ubicación ni almacenamiento externo.</p>` },
-      { title: "6. Retención y eliminación de datos",
-        body: `<p>Puedes eliminar todos tus datos desde <strong>Configuración → Privacidad avanzada → Eliminar todos los datos</strong>. Esta acción es permanente e irreversible.</p><p>Para eliminar la copia en Google Drive, puedes hacerlo desde la app o desde <a href="https://drive.google.com" target="_blank">Google Drive</a> → Almacenamiento → Datos de apps.</p><p>Si desinstalas Luna, los datos locales se eliminan automáticamente.</p>` },
-      { title: "7. Menores de edad",
-        body: `<p>Luna no está destinada a menores de 13 años. Si crees que un menor ha proporcionado información personal, contáctanos para eliminarla.</p>` },
-      { title: "8. Cambios en esta política",
-        body: `<p>Si realizamos cambios significativos, lo notificaremos dentro de la app. La fecha de actualización al inicio de este documento siempre refleja la versión vigente.</p>` },
-      { title: "9. Contacto",
-        body: `<p>Si tienes preguntas sobre esta política o el tratamiento de tus datos:</p><div class="contact-box"><a href="mailto:lunacycleappcontact@gmail.com">lunacycleappcontact@gmail.com</a></div>` }
-    ]
-  },
-  en: {
-    headerSub: "Privacy Policy",
-    updated: "Last updated: August 2026",
-    highlight: "Luna is a menstrual cycle tracking app designed to be private by default. Your health data is yours — we don't sell it, share it with advertisers, or build commercial profiles from it.",
-    sections: [
-      { title: "1. Information we collect",
-        body: `<p>Luna only collects information you enter directly into the app:</p><ul><li><strong>Menstrual cycle data:</strong> period start dates, cycle length</li><li><strong>Symptoms & wellbeing:</strong> mood, physical symptoms, daily notes, basal temperature, cervical fluid</li><li><strong>Sexual activity:</strong> optional logs you enter yourself</li><li><strong>Medications & reminders:</strong> names and schedules you set</li><li><strong>Profile:</strong> name, avatar and profile photo (optional)</li><li><strong>Google account:</strong> name, email and profile photo, if you choose to sign in</li></ul>` },
-      { title: "2. How we store your data",
-        body: `<p><strong>Local storage:</strong> all your data is stored locally on your device in the app's private database. We have no access to this data.</p><p><strong>Google Drive backup:</strong> if you sign in with Google and enable sync, Luna stores a copy in your app's private Drive folder (<code>appDataFolder</code>). Only accessible to Luna through your own account.</p>` },
-      { title: "3. Third-party services",
-        body: `<span class="tag">Firebase</span><span class="tag">Google Sign-In</span><span class="tag">Google Drive API</span><span class="tag">Gemini AI</span><ul><li><strong>Firebase Authentication:</strong> handles Google sign-in. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li><li><strong>Firebase App Check:</strong> verifies requests come from the legitimate Luna app, without collecting user data</li><li><strong>Google Drive API:</strong> stores your backup in your own Drive account. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li><li><strong>Gemini AI:</strong> if you use the AI assistant, your queries are sent to Gemini. We do not include your health data without your explicit consent</li></ul>` },
-      { title: "4. What we do NOT do",
-        body: `<ul><li>We do not sell your data to third parties</li><li>We do not share your health data with advertisers</li><li>We do not use your data for targeted advertising</li><li>We do not collect behavioral analytics</li><li>We do not access your local data without your action</li></ul>` },
-      { title: "5. Permissions the app requests",
-        body: `<ul><li><strong>Notifications:</strong> for cycle reminders you configure</li><li><strong>Exact alarms:</strong> so reminders arrive at the precise time</li><li><strong>Internet:</strong> for Google Drive sync and AI assistant</li><li><strong>Biometrics:</strong> for fingerprint lock, if you enable it</li></ul><p>Luna does not request access to camera, microphone, contacts, location or external storage.</p>` },
-      { title: "6. Data retention and deletion",
-        body: `<p>You can delete all your data from <strong>Settings → Advanced privacy → Delete all data</strong>. This action is permanent and irreversible.</p><p>To delete your Google Drive backup, use the app or go to <a href="https://drive.google.com" target="_blank">Google Drive</a> → Storage → App data.</p><p>Uninstalling Luna automatically removes all local data.</p>` },
-      { title: "7. Minors",
-        body: `<p>Luna is not intended for children under 13. If you believe a minor has provided personal information, please contact us so we can delete it.</p>` },
-      { title: "8. Changes to this policy",
-        body: `<p>If we make significant changes, we will notify you within the app. The update date at the top of this document always reflects the current version.</p>` },
-      { title: "9. Contact",
-        body: `<p>If you have questions about this policy or how your data is handled:</p><div class="contact-box"><a href="mailto:lunacycleappcontact@gmail.com">lunacycleappcontact@gmail.com</a></div>` }
-    ]
-  },
-  de: {
-    headerSub: "Datenschutzrichtlinie",
-    updated: "Zuletzt aktualisiert: August 2026",
-    highlight: "Luna ist eine App zur Verfolgung des Menstruationszyklus, die standardmäßig auf Datenschutz ausgelegt ist. Deine Gesundheitsdaten gehören dir — wir verkaufen sie nicht, teilen sie nicht mit Werbetreibenden und erstellen keine kommerziellen Profile daraus.",
-    sections: [
-      { title: "1. Welche Informationen wir sammeln",
-        body: `<p>Luna sammelt nur Informationen, die du direkt in die App eingibst:</p><ul><li><strong>Menstruationszyklus-Daten:</strong> Periodenstarttage, Zykluslänge</li><li><strong>Symptome & Wohlbefinden:</strong> Stimmung, körperliche Symptome, Tagesnotizen, Basaltemperatur, Zervixschleim</li><li><strong>Sexuelle Aktivität:</strong> optionale Einträge, die du selbst machst</li><li><strong>Medikamente & Erinnerungen:</strong> Namen und Zeiten, die du festlegst</li><li><strong>Profil:</strong> Name, Avatar und Profilfoto (optional)</li><li><strong>Google-Konto:</strong> Name, E-Mail und Profilfoto, wenn du dich anmeldest</li></ul>` },
-      { title: "2. Wie wir deine Daten speichern",
-        body: `<p><strong>Lokale Speicherung:</strong> Alle deine Daten werden lokal auf deinem Gerät in der privaten Datenbank der App gespeichert. Wir haben keinen Zugriff darauf.</p><p><strong>Google Drive-Backup:</strong> Wenn du dich mit Google anmeldest und die Synchronisierung aktivierst, speichert Luna eine Kopie im privaten App-Ordner deines Google Drive (<code>appDataFolder</code>).</p>` },
-      { title: "3. Drittanbieterdienste",
-        body: `<span class="tag">Firebase</span><span class="tag">Google Sign-In</span><span class="tag">Google Drive API</span><span class="tag">Gemini AI</span><ul><li><strong>Firebase Authentication:</strong> verwaltet die Google-Anmeldung. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase-Datenschutzrichtlinie</a></li><li><strong>Firebase App Check:</strong> überprüft, dass Anfragen von der legitimen Luna-App kommen</li><li><strong>Google Drive API:</strong> speichert dein Backup in deinem eigenen Drive. <a href="https://policies.google.com/privacy" target="_blank">Google-Datenschutzrichtlinie</a></li><li><strong>Gemini AI:</strong> Wenn du den KI-Assistenten nutzt, werden deine Anfragen an Gemini gesendet. Wir übermitteln keine Gesundheitsdaten ohne deine ausdrückliche Zustimmung</li></ul>` },
-      { title: "4. Was wir NICHT tun",
-        body: `<ul><li>Wir verkaufen deine Daten nicht an Dritte</li><li>Wir teilen deine Gesundheitsdaten nicht mit Werbetreibenden</li><li>Wir nutzen deine Daten nicht für gezielte Werbung</li><li>Wir erheben keine Verhaltensanalysen</li><li>Wir greifen nicht ohne deine Aktion auf lokale Daten zu</li></ul>` },
-      { title: "5. Berechtigungen der App",
-        body: `<ul><li><strong>Benachrichtigungen:</strong> für von dir eingestellte Zyklus-Erinnerungen</li><li><strong>Genaue Alarme:</strong> damit Erinnerungen zur genauen Zeit ankommen</li><li><strong>Internet:</strong> für Google Drive-Sync und KI-Assistenten</li><li><strong>Biometrie:</strong> für den Fingerabdruckschutz, wenn aktiviert</li></ul><p>Luna fordert keinen Zugriff auf Kamera, Mikrofon, Kontakte, Standort oder externen Speicher.</p>` },
-      { title: "6. Datenspeicherung und -löschung",
-        body: `<p>Du kannst alle deine Daten über <strong>Einstellungen → Erweiterte Privatsphäre → Alle Daten löschen</strong> löschen. Diese Aktion ist dauerhaft und unwiderruflich.</p><p>Um dein Google Drive-Backup zu löschen, nutze die App oder gehe zu <a href="https://drive.google.com" target="_blank">Google Drive</a> → Speicher → App-Daten.</p>` },
-      { title: "7. Minderjährige",
-        body: `<p>Luna ist nicht für Kinder unter 13 Jahren bestimmt. Wenn du glaubst, dass ein Minderjähriger persönliche Daten angegeben hat, kontaktiere uns zur Löschung.</p>` },
-      { title: "8. Änderungen dieser Richtlinie",
-        body: `<p>Bei wesentlichen Änderungen informieren wir dich in der App. Das Aktualisierungsdatum am Anfang dieses Dokuments spiegelt immer die aktuelle Version wider.</p>` },
-      { title: "9. Kontakt",
-        body: `<p>Bei Fragen zu dieser Richtlinie oder zur Verarbeitung deiner Daten:</p><div class="contact-box"><a href="mailto:lunacycleappcontact@gmail.com">lunacycleappcontact@gmail.com</a></div>` }
-    ]
-  },
-  fr: {
-    headerSub: "Politique de confidentialité",
-    updated: "Dernière mise à jour : août 2026",
-    highlight: "Luna est une application de suivi du cycle menstruel conçue pour être privée par défaut. Vos données de santé vous appartiennent — nous ne les vendons pas, ne les partageons pas avec des annonceurs et n\'en créons pas de profils commerciaux.",
-    sections: [
-      { title: "1. Informations que nous collectons",
-        body: `<p>Luna collecte uniquement les informations que vous saisissez directement dans l\'application :</p><ul><li><strong>Données du cycle menstruel :</strong> dates de début des règles, durée du cycle</li><li><strong>Symptômes et bien-être :</strong> humeur, symptômes physiques, notes quotidiennes, température basale, glaire cervicale</li><li><strong>Activité sexuelle :</strong> entrées optionnelles que vous saisissez vous-même</li><li><strong>Médicaments et rappels :</strong> noms et horaires que vous configurez</li><li><strong>Profil :</strong> nom, avatar et photo de profil (optionnel)</li><li><strong>Compte Google :</strong> nom, e-mail et photo de profil, si vous choisissez de vous connecter</li></ul>` },
-      { title: "2. Comment nous stockons vos données",
-        body: `<p><strong>Stockage local :</strong> toutes vos données sont stockées localement sur votre appareil dans la base de données privée de l\'application. Nous n\'y avons pas accès.</p><p><strong>Sauvegarde Google Drive :</strong> si vous vous connectez avec Google et activez la synchronisation, Luna enregistre une copie dans le dossier privé de l\'application sur votre Google Drive (<code>appDataFolder</code>).</p>` },
-      { title: "3. Services tiers",
-        body: `<span class="tag">Firebase</span><span class="tag">Google Sign-In</span><span class="tag">Google Drive API</span><span class="tag">Gemini AI</span><ul><li><strong>Firebase Authentication :</strong> gère la connexion Google. <a href="https://firebase.google.com/support/privacy" target="_blank">Politique Firebase</a></li><li><strong>Firebase App Check :</strong> vérifie que les requêtes proviennent de l\'application Luna légitime</li><li><strong>Google Drive API :</strong> stocke votre sauvegarde dans votre propre Drive. <a href="https://policies.google.com/privacy" target="_blank">Politique Google</a></li><li><strong>Gemini AI :</strong> si vous utilisez l\'assistant IA, vos requêtes sont envoyées à Gemini. Nous n\'incluons pas vos données de santé sans votre consentement explicite</li></ul>` },
-      { title: "4. Ce que nous ne faisons PAS",
-        body: `<ul><li>Nous ne vendons pas vos données à des tiers</li><li>Nous ne partageons pas vos données de santé avec des annonceurs</li><li>Nous n\'utilisons pas vos données pour de la publicité ciblée</li><li>Nous ne collectons pas d\'analyses comportementales</li><li>Nous n\'accédons pas à vos données locales sans votre action</li></ul>` },
-      { title: "5. Autorisations demandées par l\'application",
-        body: `<ul><li><strong>Notifications :</strong> pour les rappels de cycle que vous configurez</li><li><strong>Alarmes exactes :</strong> pour que les rappels arrivent à l\'heure précise</li><li><strong>Internet :</strong> pour la synchronisation Drive et l\'assistant IA</li><li><strong>Biométrie :</strong> pour le verrouillage par empreinte digitale, si activé</li></ul><p>Luna ne demande pas l\'accès à la caméra, au microphone, aux contacts, à la localisation ou au stockage externe.</p>` },
-      { title: "6. Conservation et suppression des données",
-        body: `<p>Vous pouvez supprimer toutes vos données depuis <strong>Paramètres → Confidentialité avancée → Supprimer toutes les données</strong>. Cette action est permanente et irréversible.</p><p>Pour supprimer la sauvegarde Google Drive, utilisez l\'application ou rendez-vous sur <a href="https://drive.google.com" target="_blank">Google Drive</a> → Stockage → Données d\'applications.</p>` },
-      { title: "7. Mineurs",
-        body: `<p>Luna n\'est pas destinée aux enfants de moins de 13 ans. Si vous pensez qu\'un mineur a fourni des données personnelles, contactez-nous pour les supprimer.</p>` },
-      { title: "8. Modifications de cette politique",
-        body: `<p>En cas de modifications importantes, nous vous en informerons dans l\'application. La date de mise à jour en haut de ce document reflète toujours la version en vigueur.</p>` },
-      { title: "9. Contact",
-        body: `<p>Pour toute question sur cette politique ou le traitement de vos données :</p><div class="contact-box"><a href="mailto:lunacycleappcontact@gmail.com">lunacycleappcontact@gmail.com</a></div>` }
-    ]
-  },
-  it: {
-    headerSub: "Informativa sulla privacy",
-    updated: "Ultimo aggiornamento: agosto 2026",
-    highlight: "Luna è un\'app di monitoraggio del ciclo mestruale progettata per essere privata per impostazione predefinita. I tuoi dati sulla salute sono tuoi — non li vendiamo, non li condividiamo con gli inserzionisti e non costruiamo profili commerciali con essi.",
-    sections: [
-      { title: "1. Informazioni che raccogliamo",
-        body: `<p>Luna raccoglie solo le informazioni che inserisci direttamente nell\'app:</p><ul><li><strong>Dati del ciclo mestruale:</strong> date di inizio del ciclo, durata</li><li><strong>Sintomi e benessere:</strong> umore, sintomi fisici, note giornaliere, temperatura basale, muco cervicale</li><li><strong>Attività sessuale:</strong> registrazioni opzionali che inserisci tu</li><li><strong>Farmaci e promemoria:</strong> nomi e orari che configuri</li><li><strong>Profilo:</strong> nome, avatar e foto del profilo (opzionale)</li><li><strong>Account Google:</strong> nome, email e foto del profilo, se scegli di accedere</li></ul>` },
-      { title: "2. Come archiviamo i tuoi dati",
-        body: `<p><strong>Archiviazione locale:</strong> tutti i tuoi dati vengono archiviati localmente sul tuo dispositivo nel database privato dell\'app. Non abbiamo accesso a questi dati.</p><p><strong>Backup su Google Drive:</strong> se accedi con Google e attivi la sincronizzazione, Luna salva una copia nella cartella privata dell\'app su Google Drive (<code>appDataFolder</code>).</p>` },
-      { title: "3. Servizi di terze parti",
-        body: `<span class="tag">Firebase</span><span class="tag">Google Sign-In</span><span class="tag">Google Drive API</span><span class="tag">Gemini AI</span><ul><li><strong>Firebase Authentication:</strong> gestisce l\'accesso con Google. <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Firebase</a></li><li><strong>Firebase App Check:</strong> verifica che le richieste provengano dall\'app Luna legittima</li><li><strong>Google Drive API:</strong> archivia il backup nel tuo Drive. <a href="https://policies.google.com/privacy" target="_blank">Privacy Google</a></li><li><strong>Gemini AI:</strong> se usi l\'assistente IA, le tue domande vengono inviate a Gemini. Non includiamo i tuoi dati sulla salute senza il tuo esplicito consenso</li></ul>` },
-      { title: "4. Cosa NON facciamo",
-        body: `<ul><li>Non vendiamo i tuoi dati a terze parti</li><li>Non condividiamo i tuoi dati sulla salute con gli inserzionisti</li><li>Non utilizziamo i tuoi dati per pubblicità mirata</li><li>Non raccogliamo analisi comportamentali</li><li>Non accediamo ai tuoi dati locali senza la tua azione</li></ul>` },
-      { title: "5. Autorizzazioni richieste dall\'app",
-        body: `<ul><li><strong>Notifiche:</strong> per i promemoria del ciclo che configuri</li><li><strong>Allarmi esatti:</strong> affinché i promemoria arrivino all\'ora precisa</li><li><strong>Internet:</strong> per la sincronizzazione con Drive e l\'assistente IA</li><li><strong>Biometria:</strong> per il blocco con impronta digitale, se attivato</li></ul><p>Luna non richiede l\'accesso a fotocamera, microfono, contatti, posizione o archiviazione esterna.</p>` },
-      { title: "6. Conservazione ed eliminazione dei dati",
-        body: `<p>Puoi eliminare tutti i tuoi dati da <strong>Impostazioni → Privacy avanzata → Elimina tutti i dati</strong>. Questa azione è permanente e irreversibile.</p><p>Per eliminare il backup su Google Drive, usa l\'app o vai su <a href="https://drive.google.com" target="_blank">Google Drive</a> → Spazio di archiviazione → Dati delle app.</p>` },
-      { title: "7. Minori",
-        body: `<p>Luna non è destinata ai minori di 13 anni. Se ritieni che un minore abbia fornito dati personali, contattaci per eliminarli.</p>` },
-      { title: "8. Modifiche a questa informativa",
-        body: `<p>In caso di modifiche significative, ti avviseremo all\'interno dell\'app. La data di aggiornamento in cima a questo documento riflette sempre la versione vigente.</p>` },
-      { title: "9. Contatto",
-        body: `<p>Per domande su questa informativa o sul trattamento dei tuoi dati:</p><div class="contact-box"><a href="mailto:lunacycleappcontact@gmail.com">lunacycleappcontact@gmail.com</a></div>` }
-    ]
-  },
-  pt: {
-    headerSub: "Política de Privacidade",
-    updated: "Última atualização: agosto de 2026",
-    highlight: "Luna é um aplicativo de monitoramento do ciclo menstrual projetado para ser privado por padrão. Seus dados de saúde são seus — não os vendemos, não os compartilhamos com anunciantes e não criamos perfis comerciais com eles.",
-    sections: [
-      { title: "1. Informações que coletamos",
-        body: `<p>Luna coleta apenas as informações que você insere diretamente no aplicativo:</p><ul><li><strong>Dados do ciclo menstrual:</strong> datas de início do período, duração do ciclo</li><li><strong>Sintomas e bem-estar:</strong> humor, sintomas físicos, notas diárias, temperatura basal, muco cervical</li><li><strong>Atividade sexual:</strong> registros opcionais que você insere</li><li><strong>Medicamentos e lembretes:</strong> nomes e horários que você configura</li><li><strong>Perfil:</strong> nome, avatar e foto de perfil (opcional)</li><li><strong>Conta Google:</strong> nome, e-mail e foto de perfil, se você escolher fazer login</li></ul>` },
-      { title: "2. Como armazenamos seus dados",
-        body: `<p><strong>Armazenamento local:</strong> todos os seus dados são armazenados localmente no seu dispositivo no banco de dados privado do aplicativo. Não temos acesso a esses dados.</p><p><strong>Backup no Google Drive:</strong> se você fizer login com o Google e ativar a sincronização, o Luna salva uma cópia na pasta privada do aplicativo no seu Google Drive (<code>appDataFolder</code>).</p>` },
-      { title: "3. Serviços de terceiros",
-        body: `<span class="tag">Firebase</span><span class="tag">Google Sign-In</span><span class="tag">Google Drive API</span><span class="tag">Gemini AI</span><ul><li><strong>Firebase Authentication:</strong> gerencia o login com Google. <a href="https://firebase.google.com/support/privacy" target="_blank">Política do Firebase</a></li><li><strong>Firebase App Check:</strong> verifica que as solicitações vêm do aplicativo Luna legítimo</li><li><strong>Google Drive API:</strong> armazena seu backup na sua própria conta do Drive. <a href="https://policies.google.com/privacy" target="_blank">Política do Google</a></li><li><strong>Gemini AI:</strong> se você usar o assistente de IA, suas consultas são enviadas ao Gemini. Não incluímos seus dados de saúde sem seu consentimento explícito</li></ul>` },
-      { title: "4. O que NÃO fazemos",
-        body: `<ul><li>Não vendemos seus dados a terceiros</li><li>Não compartilhamos seus dados de saúde com anunciantes</li><li>Não usamos seus dados para publicidade direcionada</li><li>Não coletamos análises comportamentais</li><li>Não acessamos seus dados locais sem sua ação</li></ul>` },
-      { title: "5. Permissões solicitadas pelo aplicativo",
-        body: `<ul><li><strong>Notificações:</strong> para lembretes de ciclo que você configurar</li><li><strong>Alarmes exatos:</strong> para que os lembretes cheguem no horário preciso</li><li><strong>Internet:</strong> para sincronização com o Drive e assistente de IA</li><li><strong>Biometria:</strong> para bloqueio por impressão digital, se ativado</li></ul><p>Luna não solicita acesso a câmera, microfone, contatos, localização ou armazenamento externo.</p>` },
-      { title: "6. Retenção e exclusão de dados",
-        body: `<p>Você pode excluir todos os seus dados em <strong>Configurações → Privacidade avançada → Excluir todos os dados</strong>. Esta ação é permanente e irreversível.</p><p>Para excluir o backup do Google Drive, use o aplicativo ou acesse <a href="https://drive.google.com" target="_blank">Google Drive</a> → Armazenamento → Dados de apps.</p>` },
-      { title: "7. Menores de idade",
-        body: `<p>Luna não se destina a menores de 13 anos. Se você acredita que um menor forneceu informações pessoais, entre em contato conosco para excluí-las.</p>` },
-      { title: "8. Alterações nesta política",
-        body: `<p>Se fizermos alterações significativas, notificaremos você dentro do aplicativo. A data de atualização no início deste documento sempre reflete a versão vigente.</p>` },
-      { title: "9. Contato",
-        body: `<p>Se você tiver dúvidas sobre esta política ou o tratamento dos seus dados:</p><div class="contact-box"><a href="mailto:lunacycleappcontact@gmail.com">lunacycleappcontact@gmail.com</a></div>` }
-    ]
-  }
-};
+<h3>2.2 Tu copia de seguridad en Google Drive</h3>
+<p>Si activas la copia de seguridad, Luna guarda tus ciclos, notas, datos de embarazo
+y fotos de barriga (reducidas) en la <strong>carpeta privada de la aplicación</strong> dentro
+de tu propio Google Drive. Esa carpeta no aparece en la interfaz de Drive y ninguna
+otra aplicación puede leerla. Luna sólo pide el permiso <code>drive.appdata</code>: no tiene
+acceso a ningún otro archivo tuyo de Drive.</p>
+<div class="box">
+  <p><strong>Puedes cifrarla.</strong> En Ajustes puedes poner una contraseña para la copia.
+  Si lo haces, se cifra en tu teléfono antes de subirla y sólo tú puedes abrirla. Si no
+  pones contraseña, la copia se guarda sin cifrar dentro de esa carpeta privada.</p>
+</div>
 
-function setLang(lang) {
-  const t = T[lang];
-  document.getElementById('header-sub').textContent = t.headerSub;
-  document.getElementById('updated-date').textContent = t.updated;
-  let html = `<div class="highlight">${t.highlight}</div>`;
-  for (const s of t.sections) {
-    html += `<h2>${s.title}</h2>${s.body}`;
-  }
-  document.getElementById('policy-content').innerHTML = html;
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-  document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
-}
+<h3>2.3 Modo pareja</h3>
+<p>Sólo si lo activas y generas un código para compartir. En ese caso se envían a
+Firebase (Google Cloud) los siguientes datos, asociados a un código temporal:</p>
+<p>fase del ciclo, día del ciclo, duración del ciclo y de la regla, fecha del último
+periodo, fecha prevista del próximo, estado de ánimo, síntomas, tu nombre, tu avatar,
+y si has decidido compartir la ventana fértil.</p>
+<p>El código caduca, y al desactivar el modo pareja esos datos se borran.</p>
 
-setLang('es');
-</script>
+<h3>2.4 El chat con la asistente</h3>
+<div class="box warn">
+  <p><strong>Esto es lo más importante de esta política.</strong> Cuando escribes a la
+  asistente de Luna, tu mensaje se envía a un proveedor de inteligencia artificial
+  externo para poder responderte. Junto al mensaje se envía contexto sobre ti:</p>
+  <p>tu fase actual del ciclo, la duración de tu ciclo y de tu regla, la fecha de tu
+  último periodo y la prevista del próximo, tu nombre de perfil y tu edad.</p>
+  <p>Los proveedores son <strong>Groq</strong>, <strong>Cerebras</strong> y
+  <strong>Google (Gemini)</strong>; se usa el primero que responda. Si no quieres que
+  estos datos salgan de tu teléfono, no uses el chat: el resto de la aplicación
+  funciona sin él.</p>
+</div>
+
+<h2>3. Con quién se comparten tus datos</h2>
+<div class="wrap">
+<table>
+  <tr><th>Tercero</th><th>Qué recibe</th><th>Cuándo</th></tr>
+  <tr><td>Google Drive</td><td>Tu copia de seguridad</td><td>Si activas la copia</td></tr>
+  <tr><td>Google Firebase</td><td>Datos de ciclo del modo pareja; identificador de tu cuenta</td><td>Si usas el modo pareja o inicias sesión</td></tr>
+  <tr><td>Groq, Cerebras, Google (Gemini)</td><td>Mensajes del chat y el contexto del punto 2.4</td><td>Si usas el chat</td></tr>
+  <tr><td>Google AdMob</td><td>Identificador de publicidad del dispositivo</td><td>En la versión gratuita</td></tr>
+  <tr><td>Google Play</td><td>Gestión de la suscripción</td><td>Si contratas Luna Pro</td></tr>
+</table>
+</div>
+<p><strong>No vendemos tus datos.</strong> No hay herramientas de analítica, ni de medición
+de uso, ni redes publicitarias más allá de AdMob.</p>
+
+<h2>4. Publicidad</h2>
+<p>La versión gratuita muestra anuncios a través de Google AdMob, que usa el
+identificador de publicidad del dispositivo. La primera vez se te pregunta por tu
+consentimiento mediante el formulario oficial de Google, y puedes cambiar esa decisión
+desde los ajustes de la app. Contratando Luna Pro desaparecen los anuncios.</p>
+
+<h2>5. Permisos que pide la app, y para qué</h2>
+<div class="wrap">
+<table>
+  <tr><th>Permiso</th><th>Para qué</th></tr>
+  <tr><td>Notificaciones</td><td>Recordatorios de regla, ovulación y medicación</td></tr>
+  <tr><td>Alarmas exactas</td><td>Que el recordatorio suene a la hora que pusiste</td></tr>
+  <tr><td>Cámara y fotos</td><td>Foto de perfil y fotos de barriga. Sólo si las usas</td></tr>
+  <tr><td>Biometría</td><td>Desbloquear la app con huella, como alternativa al PIN</td></tr>
+  <tr><td>Internet</td><td>Copia de Drive, modo pareja, chat y anuncios</td></tr>
+  <tr><td>Arranque del dispositivo</td><td>Volver a programar los recordatorios tras reiniciar</td></tr>
+</table>
+</div>
+
+<h2>6. Cuánto se conservan</h2>
+<p>Los datos del teléfono se conservan mientras tengas la app instalada. Al
+desinstalarla se borran con ella. La copia de Drive permanece hasta que la borres.
+Los datos del modo pareja caducan con el código. Lo que se envía al chat lo trata cada
+proveedor según su propia política.</p>
+
+<h2>7. Cómo borrar tus datos</h2>
+<p>Dentro de la app, en Ajustes:</p>
+<ul>
+  <li><strong>Cerrar sesión de Google</strong> borra todos los datos locales y la sesión.</li>
+  <li><strong>Borrado de emergencia</strong> ofrece dos opciones: borrar sólo este
+  dispositivo, o un borrado completo que además elimina la copia de Drive, tu código
+  de pareja y tu cuenta de autenticación.</li>
+  <li><strong>Borrar copia de seguridad</strong> elimina sólo la de Drive.</li>
+</ul>
+<p>También puedes pedirlo por escrito: <a href="borrado-de-cuenta.html">página de
+eliminación de cuenta y datos</a>.</p>
+
+<h2>8. Menores</h2>
+<p>Luna no está dirigida a menores de 13 años y no recoge datos a sabiendas de personas
+de esa edad. Si eres madre, padre o tutor y crees que un menor nos ha facilitado datos,
+escríbenos y los eliminaremos.</p>
+
+<h2>9. Tus derechos</h2>
+<p>Si resides en el Espacio Económico Europeo o el Reino Unido, el RGPD te reconoce el
+derecho a acceder a tus datos, rectificarlos, suprimirlos, limitar u oponerte a su
+tratamiento, y a la portabilidad. Como la mayoría de tus datos están únicamente en tu
+teléfono, puedes ejercer casi todos desde la propia app. Para el resto, escríbenos.</p>
+
+<h2>10. Cambios en esta política</h2>
+<p>Si cambia, se actualizará esta página y la fecha del encabezado. Si el cambio es
+sustancial, se avisará dentro de la aplicación.</p>
+
+<hr style="margin:56px 0 0; border:0; border-top:1px solid var(--line)">
+
+<h1 id="english" style="margin-top:48px">Luna Privacy Policy</h1>
+<p class="sub">Last updated: 6 November 2026</p>
+
+<div class="box">
+  <p><strong>In short.</strong> Your cycle data lives encrypted on your phone. There is no
+  analytics, no usage tracking, and no crash reporting sent anywhere. It leaves your
+  phone in three cases only, and you choose all three: the backup in your own Google
+  Drive, partner mode, and the assistant chat.</p>
+</div>
+
+<h2>1. Who handles your data</h2>
+<p>Luna is independently developed. For anything about your data, including exercising
+your rights, write to: <strong><a href="mailto:lunacycleappcontact@gmail.com">lunacycleappcontact@gmail.com</a></strong></p>
+
+<h2>2. What the app collects, and where it is kept</h2>
+<h3>2.1 On your phone only</h3>
+<p>Most of what you record never leaves the device: cycles and predictions, symptoms,
+moods and diary notes, basal temperature and cervical fluid, medication and reminders,
+sexual activity, pregnancy data and chat history — all in a database encrypted with
+SQLCipher. Your name, date of birth, Google email and PIN are encrypted with the
+Android keystore (AES/GCM). Bump photos are kept in the app's private folder.
+<strong>Crash reports are never sent anywhere</strong>; they stay on the phone for you to read.</p>
+
+<h3>2.2 Your Google Drive backup</h3>
+<p>If you turn on backup, Luna stores your cycles, notes, pregnancy data and
+downscaled bump photos in the <strong>app's private folder</strong> inside your own Google
+Drive. That folder does not appear in the Drive interface and no other app can read it.
+Luna only requests the <code>drive.appdata</code> scope: it has no access to any of your other
+Drive files. You can set a passphrase in Settings; the backup is then encrypted on your
+phone before upload and only you can open it. Without a passphrase it is stored
+unencrypted inside that private folder.</p>
+
+<h3>2.3 Partner mode</h3>
+<p>Only if you enable it and generate a sharing code. Luna then sends to Firebase
+(Google Cloud), under a temporary code: cycle phase, day of cycle, cycle and period
+length, last period date, predicted next period, mood, symptoms, your name, your
+avatar, and whether you chose to share your fertile window. The code expires, and
+turning partner mode off deletes the data.</p>
+
+<h3>2.4 The assistant chat</h3>
+<div class="box warn">
+  <p><strong>This is the most important part of this policy.</strong> When you write to
+  Luna's assistant, your message is sent to an external AI provider so it can reply.
+  Context about you is sent with it: your current cycle phase, your cycle and period
+  length, your last and predicted next period dates, your profile name and your age.</p>
+  <p>The providers are <strong>Groq</strong>, <strong>Cerebras</strong> and
+  <strong>Google (Gemini)</strong>; whichever answers first is used. If you do not want
+  this data to leave your phone, do not use the chat — the rest of the app works
+  without it.</p>
+</div>
+
+<h2>3. Who your data is shared with</h2>
+<p>Google Drive (your backup, if enabled); Google Firebase (partner-mode cycle data and
+your account identifier, if you use partner mode or sign in); Groq, Cerebras and Google
+Gemini (chat messages and the context in 2.4, if you use the chat); Google AdMob (the
+device advertising identifier, in the free version); Google Play (subscription
+management, if you buy Luna Pro).</p>
+<p><strong>We do not sell your data.</strong> There is no analytics, no usage measurement and
+no ad network other than AdMob.</p>
+
+<h2>4. Advertising</h2>
+<p>The free version shows ads through Google AdMob, which uses the device advertising
+identifier. You are asked for consent on first run through Google's official form, and
+you can change that choice in the app's settings. Luna Pro removes the ads.</p>
+
+<h2>5. Permissions</h2>
+<p>Notifications (period, ovulation and medication reminders); exact alarms (so a
+reminder fires at the time you set); camera and photos (profile and bump photos, only
+if you use them); biometrics (unlock with fingerprint instead of the PIN); internet
+(backup, partner mode, chat and ads); boot completed (to reschedule reminders after a
+restart).</p>
+
+<h2>6. Retention</h2>
+<p>Data on the phone is kept while the app is installed and is removed when you
+uninstall it. The Drive backup stays until you delete it. Partner-mode data expires
+with the code. Data sent to the chat is handled by each provider under its own policy.</p>
+
+<h2>7. Deleting your data</h2>
+<p>In the app's settings: <strong>Sign out of Google</strong> deletes all local data and the
+session; backup; <strong>Emergency delete</strong> offers two options — this device only, or a full
+wipe that also removes the Drive backup, your partner code and your authentication
+account; <strong>Delete backup</strong> removes only the Drive copy. You can also request it in
+writing: <a href="borrado-de-cuenta.html">account and data deletion page</a>.</p>
+
+<h2>8. Children</h2>
+<p>Luna is not directed at children under 13 and does not knowingly collect their data.
+If you are a parent or guardian and believe a child has given us data, write to us and
+we will delete it.</p>
+
+<h2>9. Your rights</h2>
+<p>If you are in the EEA or the UK, the GDPR gives you the right to access, rectify,
+erase, restrict or object to the processing of your data, and to data portability. As
+most of your data is only on your phone, you can exercise nearly all of these from the
+app itself. For the rest, write to us.</p>
+
+<h2>10. Changes</h2>
+<p>If this policy changes, this page and the date at the top are updated. Substantial
+changes are announced inside the app.</p>
+
+<footer>
+  Luna · <code>com.lunaapp.cycle</code>
+</footer>
+
+</main>
+</body>
+</html>
