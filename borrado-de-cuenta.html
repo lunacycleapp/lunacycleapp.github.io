@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eliminar tu cuenta y tus datos · Luna</title>
+<style>
+  :root {
+    --bg:#ffffff; --card:#f7f4fc; --ink:#241536; --muted:#5d4d78;
+    --line:#e2d8f2; --accent:#7b3fc4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:#140c22; --card:#1e1333; --ink:#efe6ff; --muted:#b4a0d4;
+      --line:#352352; --accent:#c08cff;
+    }
+  }
+  * { box-sizing:border-box }
+  body {
+    margin:0; padding:0 16px 72px; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  }
+  main { max-width:44rem; margin:0 auto }
+  header { padding:48px 0 8px; border-bottom:1px solid var(--line); margin-bottom:32px }
+  h1 { font-size:1.9rem; line-height:1.2; margin:0 0 8px; text-wrap:balance }
+  h2 {
+    font-size:1.15rem; margin:40px 0 10px; padding-top:20px;
+    border-top:1px solid var(--line); text-wrap:balance;
+  }
+  h2:first-of-type { border-top:0; padding-top:0 }
+  .sub { color:var(--muted); font-size:.95rem; margin:0 }
+  ol { padding-left:1.3rem }
+  ol li { margin:10px 0 }
+  table { width:100%; border-collapse:collapse; margin:14px 0; font-size:.93rem }
+  th, td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top }
+  th { color:var(--muted); font-weight:600 }
+  .wrap { overflow-x:auto }
+  .box {
+    background:var(--card); border:1px solid var(--line);
+    border-radius:12px; padding:14px 18px; margin:18px 0;
+  }
+  .box p:first-child { margin-top:0 }
+  .box p:last-child { margin-bottom:0 }
+  a { color:var(--accent) }
+  code {
+    background:var(--card); padding:1px 5px; border-radius:4px;
+    font:0.88em ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Eliminar tu cuenta y tus datos de Luna</h1>
+  <p class="sub">Aplicación: Luna · <code>com.lunaapp.cycle</code> · <a href="#english">English version below</a></p>
+</header>
+
+<div class="box">
+  <p>Puedes borrarlo todo tú misma desde la aplicación, sin pedir permiso a nadie y sin
+  esperar. Abajo está cómo, y también cómo pedirlo por escrito si ya desinstalaste la app.</p>
+</div>
+
+<h2>Opción 1 · Desde la aplicación (inmediato)</h2>
+<ol>
+  <li>Abre Luna y entra en <strong>Configuración</strong>.</li>
+  <li>Baja hasta <strong>Borrado de emergencia</strong>.</li>
+  <li>Elige una de las dos opciones que aparecen y confirma con tu huella o tu PIN.</li>
+</ol>
+<div class="wrap">
+<table>
+  <tr><th>Opción</th><th>Qué borra</th></tr>
+  <tr>
+    <td><strong>Solo en este dispositivo</strong></td>
+    <td>Todos los datos del teléfono. <strong>Tu copia de Drive y tu código de pareja se quedan.</strong></td>
+  </tr>
+  <tr>
+    <td><strong>Borrado completo</strong></td>
+    <td>Los datos del teléfono, la copia de seguridad de Google Drive, tu código de
+    pareja en Firebase y tu cuenta de autenticación.</td>
+  </tr>
+</table>
+</div>
+<p>Si sólo quieres quitar la copia de la nube y dejar el teléfono como está, en esa
+misma pantalla tienes <strong>Borrar copia de seguridad</strong>. Y
+<strong>Cerrar sesión de Google</strong> borra todos los datos locales y la sesión.</p>
+
+<h2>Opción 2 · Por escrito</h2>
+<p>Si ya desinstalaste la aplicación y quieres asegurarte de que no queda nada, escribe a:</p>
+<p><strong><a href="mailto:lunacycleappcontact@gmail.com">lunacycleappcontact@gmail.com</a></strong></p>
+<p>Indica el correo de Google con el que usabas Luna. La solicitud se atiende en un
+plazo máximo de 30 días.</p>
+
+<h2>Qué se borra y qué no</h2>
+<div class="wrap">
+<table>
+  <tr><th>Dato</th><th>Qué pasa</th></tr>
+  <tr><td>Ciclos, síntomas, notas, temperatura, medicación, actividad sexual, embarazo</td><td>Se borran del teléfono</td></tr>
+  <tr><td>Fotos de barriga y de perfil</td><td>Se borran del teléfono</td></tr>
+  <tr><td>Historial del chat</td><td>Se borra del teléfono</td></tr>
+  <tr><td>Nombre, fecha de nacimiento, PIN, correo</td><td>Se borran del teléfono</td></tr>
+  <tr><td>Copia de seguridad en tu Google Drive</td><td>Se borra sólo con la opción <strong>Borrado completo</strong></td></tr>
+  <tr><td>Datos del modo pareja</td><td>Caducan con el código; el <strong>Borrado completo</strong> los elimina al momento</td></tr>
+  <tr><td>Mensajes ya enviados al chat</td><td><strong>No podemos borrarlos</strong>: los trata cada proveedor de IA según su propia política</td></tr>
+  <tr><td>Suscripción Luna Pro</td><td>Se cancela desde Google Play, no desde aquí</td></tr>
+</table>
+</div>
+
+<div class="box">
+  <p><strong>No se conserva ningún dato tras el borrado.</strong> Luna no guarda copias en
+  servidores propios: lo que hay está en tu teléfono y en tu propio Drive.</p>
+</div>
+
+<p style="margin-top:32px"><a href="index.html">Política de privacidad</a></p>
+
+<hr style="margin:56px 0 0; border:0; border-top:1px solid var(--line)">
+
+<h1 id="english" style="margin-top:48px">Delete your Luna account and data</h1>
+<p class="sub">App: Luna · <code>com.lunaapp.cycle</code></p>
+
+<div class="box">
+  <p>You can delete everything yourself from inside the app, with no request and no
+  waiting. Below is how, and how to ask in writing if you have already uninstalled.</p>
+</div>
+
+<h2>Option 1 · In the app (immediate)</h2>
+<ol>
+  <li>Open Luna and go to <strong>Settings</strong>.</li>
+  <li>Scroll to <strong>Emergency delete</strong>.</li>
+  <li>Pick one of the two options shown, and confirm with your fingerprint or PIN.</li>
+</ol>
+<p><strong>This device only</strong> deletes all data from the phone; your Drive backup and
+your partner code remain. <strong>Full wipe</strong> deletes the phone data, the Google Drive
+backup, your partner code in Firebase and your authentication account.</p>
+<p>To remove only the cloud copy and leave the phone as it is, the same screen has
+<strong>Delete backup</strong>. <strong>Sign out of Google</strong> deletes all local data and the
+session.</p>
+
+<h2>Option 2 · In writing</h2>
+<p>If you have already uninstalled the app and want to be sure nothing is left, write
+to: <strong><a href="mailto:lunacycleappcontact@gmail.com">lunacycleappcontact@gmail.com</a></strong></p>
+<p>Include the Google address you used with Luna. Requests are handled within 30 days
+at most.</p>
+
+<h2>What is deleted, and what is not</h2>
+<p>Deleted from the phone: cycles, symptoms, notes, temperature, medication, sexual
+activity, pregnancy data, bump and profile photos, chat history, your name, date of
+birth, PIN and email. The Google Drive backup and the partner code are deleted by the
+<strong>Full wipe</strong> option only; partner-mode data otherwise expires with the code.</p>
+<p><strong>Messages already sent to the chat cannot be deleted by us</strong>: they are handled
+by each AI provider under its own policy. The Luna Pro subscription is cancelled
+through Google Play, not here.</p>
+<p><strong>No data is retained after deletion.</strong> Luna keeps no copies on its own
+servers: what exists is on your phone and in your own Drive.</p>
+
+<p style="margin-top:32px"><a href="index.html">Privacy policy</a></p>
+
+<footer>
+  Luna · <code>com.lunaapp.cycle</code>
+</footer>
+
+</main>
+</body>
+</html>
